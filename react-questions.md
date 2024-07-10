@@ -1,6 +1,15 @@
-# How does react works?
-React creates a virtual DOM. When a state chages in a component, it first runs a "diffing" algorithm which identifes what has changed in Virtual DOM. The second step is reconciliation, where it updates the dom with the result of diff.
+# What is the difference between npx and npm?
+    - NPM is a package manager and can be used to install node.js packages.
+    - NPX is a tool to execute node.js packages.
 
+# How does react works?
+    - React creates a virtual DOM. When a state chages in a component, it first runs a "diffing" algorithm which identifes what has changed in Virtual DOM. The second step is reconciliation, where it updates the dom with the result of diff.
+
+# Explain the Virtual DOM in React.
+   - The Virtual DOM is a lightweight copy of the actual DOM. React uses it to improve performance by updating only the parts of the actual DOM that have changed, rather than re-rendering the entire DOM.
+
+# Explain  React Hooks.
+    - React Hooks are functions that let you use state and other React features in functional components. Hooks provide a way to use state and lifecycle methods in functional components, which were previously only possible in class components.
 # What is jsx?
 JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with React to describe what the UI should look like.
 1. Syntax: JSX looks similar to HTML but it is used within JavaScript code. It allows you to write HTML-like code directly in your JavaScript files.
@@ -48,10 +57,34 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
 - Props are read-only, and a child component cannot modify the props it receives from its parent. 
 - Props are passed to a component as attributes, and they are accessed using the "this.props" keyword.
 
-
 # Controlled Components:
 - In React, the Controlled Component pattern involves managing the component’s state through React’s state system. The component’s state is controlled and updated by React, and changes are reflected through props.
 - This pattern allows for a more predictable and controlled flow of data in the application.
 
+# What is a higher order component?
+- A Higher-Order Component (HOC) in React is a function that takes a component and returns a new component with added functionality. HOCs are used for reusing component logic and abstracting common behaviors.
+
 # When rendering a list what is a key and what is it's purpose?
 - Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys. When you don't have stable IDs for rendered items, you may use the item index as a key as a last resort. It is not recommend to use indexes for keys if the items can reorder, as that would be slow.
+
+# What are refs used for in React?
+- In React, refs are used to access DOM elements or React elements directly. Here are some common use cases for refs in React:
+1. Accessing DOM Elements: You can use refs to get a reference to a DOM element and directly manipulate it. This is useful for focusing on input fields, playing media, or getting the value of an element.
+2. Managing Focus: You can set the focus to a specific element, such as an input field.
+3. Triggering Animations: refs can be used to directly access and manipulate elements to trigger animations or transitions.
+4. Storing Instance Variables: You can use refs to store any mutable value that doesn't cause a re-render when changed. This is often used to store instance variables in functional components.
+5. Integrating with Third-Party Libraries.
+
+# What is  redux?
+- Redux is a state management library for JavaScript applications, most commonly used with React.
+- The basic idea of  redux is that the entire application state is kept in a single store. The store is simply a javascript object. (The entire state of your application is stored in a single JavaScript object called the store.)
+- The only way to change the state is to dispatch an action, which is a plain JavaScript object describing what happened. and then writing reducers for these actions that modify the state.
+# Difference between action and reducer.
+- Action:--
+ - Actions are plain javascript objects.
+ - They must have a type indicating the type of action being performed.
+ - In essence, actions are payloads of information that send data from your application to your store.
+- Reducer:--
+ - A reducer is simply a pure function that takes the previous state and an action, and returns the next state.
+# What is  Redux Thunk used for?
+    -  Redux Thunk is middleware that allows you to write action creators that return a function instead of an action.
