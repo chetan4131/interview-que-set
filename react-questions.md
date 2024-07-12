@@ -88,3 +88,20 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
  - A reducer is simply a pure function that takes the previous state and an action, and returns the next state.
 # What is  Redux Thunk used for?
     -  Redux Thunk is middleware that allows you to write action creators that return a function instead of an action.
+# What is the useEffect hook used for?
+    - The useEffect hook is used for performing side effects in functional components. This can include things like data fetching, setting up subscriptions, manually changing the DOM, setting up timers. The useEffect hook is called after the component renders, and can be used to ensure that your component stays up-to-date with any relevant data or dependencies.
+
+# Why virtual DOM is faster to update than real DOM?
+    - The virtual DOM is faster to update than the real DOM because  React uses a clever technique to minimize the number of updates that need to be made to the real DOM.
+    - When you update the virtual DOM,  React will compare the new virtual DOM with the old one, determine which parts have changed, and then update the real DOM accordingly. This means that only the parts of the DOM that actually need to be changed are updated, which is much faster than updating the entire DOM every time there is a change.
+# What are some common hooks that are used in React?
+    - Some common hooks that are used in React include useState, useEffect, and useContext. 
+    - The useState hook allows a functional component to have local state, 
+    - The useEffect hook allows a functional component to perform side effects, 
+    - The useContext hook allows a functional component to access values from the nearest context provider.
+# React Router
+    - React Router is a standard library for routing in React applications. It enables the navigation between different components in a React application, changing the browser URL, and keeping the UI in sync with the URL.
+# What is Lifting State Up in React?
+    - When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
+#  What is children prop?
+    - Children is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.
