@@ -9,7 +9,9 @@
    - The Virtual DOM is a lightweight copy of the actual DOM. React uses it to improve performance by updating only the parts of the actual DOM that have changed, rather than re-rendering the entire DOM.
 
 # Explain  React Hooks.
-    - React Hooks are functions that let you use state and other React features in functional components. Hooks provide a way to use state and lifecycle methods in functional components, which were previously only possible in class components.
+    - React Hooks are functions that let you use state and other React features in functional components. 
+    - In other words, hooks are the functions that make functional component work like class components.
+    - (OR) Hooks provide a way to use state and lifecycle methods in functional components, which were previously only possible in class components.
 # What is jsx?
 JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with React to describe what the UI should look like.
 1. Syntax: JSX looks similar to HTML but it is used within JavaScript code. It allows you to write HTML-like code directly in your JavaScript files.
@@ -105,7 +107,18 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
     - When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
 #  What is children prop?
     - Children is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.
-
+# useMemo Hook - 
+    -useMemo is used to sapplay memoization in react.
+    -memoization is a technique for improve the performance of the code.
+    - it is useful to avoid expensive calculations on every render when the returned value is not changed.
+    - we can stop running unwanted functions on re-rendering
+# difference between useEffect and useMemo?
+    - syntax are similar
+    - in useEffect hook we can't return value and can't store in a variable, but in useMemo we can return value and store in a variable.
+# custom hook
+    - custom hooks are basically a reusable function.
+    - custom hooks are your logic which you created as a reusable function.
+    - you can use multiple hooks and create something that will help you to skip repeated tasks in your project.
 # JavaScript questions =>
  https://chatgpt.com/share/ef7ce897-f4b6-49f0-8521-3bced63af3f5
 
