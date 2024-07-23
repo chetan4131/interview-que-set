@@ -40,10 +40,10 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
     * Stateless: Typically, they do not manage their own state. They receive data and callbacks exclusively via props.
 
 # Function Components: 
-    These are simple JavaScript functions that take props as input and return JSX elements. They are often used for presentational or stateless components.
+    These are simple JavaScript functions that take props as input and return JSX elements. They are often used for presentational or stateless components. They do not have state or lifecycle methods directly, but with the introduction of Hooks in React 16.8, functional components can use state and other features.
 
 # Class Components:
-    These are ES6 classes that extend from React.Component or React.PureComponent. They have a render() method where you define the structure of your component's UI using JSX. Class components are used for components that need to manage state or have lifecycle methods.
+    These are ES6 classes that extend from React.Component or React.PureComponent and can have state and lifecycle methods. They have a render() method where you define the structure of your component's UI using JSX. Class components are used for components that need to manage state or have lifecycle methods.
 
 # State in React:
 - In React, state is used to manage the internal data of a component. 
@@ -75,9 +75,9 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
 4. Storing Instance Variables: You can use refs to store any mutable value that doesn't cause a re-render when changed. This is often used to store instance variables in functional components.
 5. Integrating with Third-Party Libraries.
 
-# What is  redux?
+# What is redux?
 - Redux is a state management library for JavaScript applications, most commonly used with React.
-- The basic idea of  redux is that the entire application state is kept in a single store. The store is simply a javascript object. (The entire state of your application is stored in a single JavaScript object called the store.)
+- The basic idea of redux is that the entire application state is kept in a single store. The store is simply a javascript object. (The entire state of your application is stored in a single JavaScript object called the store.)
 - The only way to change the state is to dispatch an action, which is a plain JavaScript object describing what happened. and then writing reducers for these actions that modify the state.
 # Difference between action and reducer.
 - Action:--
@@ -99,9 +99,82 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
     - The useState hook allows a functional component to have local state, 
     - The useEffect hook allows a functional component to perform side effects, 
     - The useContext hook allows a functional component to access values from the nearest context provider.
-# React Router
+# React Router / types of routers 
     - React Router is a standard library for routing in React applications. It enables the navigation between different components in a React application, changing the browser URL, and keeping the UI in sync with the URL.
 # What is Lifting State Up in React?
     - When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
 #  What is children prop?
     - Children is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.
+
+# JavaScript questions =>
+ https://chatgpt.com/share/ef7ce897-f4b6-49f0-8521-3bced63af3f5
+
+# Event Loop:
+
+The event loop is a fundamental concept in JavaScript that handles asynchronous operations and ensures non-blocking execution. It allows JavaScript to perform long-running operations without freezing the entire program. Here's a breakdown of how the event loop works:
+ 
+### 1. Single-Threaded Nature of JavaScript
+JavaScript is single-threaded, meaning it has a single call stack, and it can do one thing at a time. This can be problematic for long-running tasks, but the event loop helps manage these tasks efficiently.
+ 
+### 2. Call Stack
+The call stack is a data structure that keeps track of function calls. When a function is called, it’s added to the stack, and when it returns, it’s removed from the stack.
+ 
+### 3. Web APIs
+Web APIs are provided by the browser (or Node.js in the case of server-side JavaScript) to handle asynchronous operations such as DOM events, HTTP requests, and timers. These operations do not run on the main call stack but are instead handled by the browser or Node.js environment.
+ 
+### 4. Task Queue (Callback Queue)
+When an asynchronous operation completes, its callback function is moved to the task queue. This queue stores all the callback functions that are ready to run.
+ 
+### 5. Event Loop
+The event loop continuously checks if the call stack is empty. If it is, it takes the first callback from the task queue and pushes it onto the call stack, effectively allowing it to execute.
+ 
+### 6. Microtask Queue
+In addition to the task queue, there’s a microtask queue that handles promises and other microtasks. The event loop gives priority to the microtask queue, ensuring that all microtasks are executed before moving on to the task queue.
+ 
+### Example
+ 
+Here's an example to illustrate the event loop:
+ 
+javascript
+console.log('Start');
+ 
+setTimeout(() => {
+  console.log('Timeout');
+}, 0);
+ 
+Promise.resolve()
+  .then(() => {
+    console.log('Promise');
+  });
+ 
+console.log('End');
+
+ 
+### Execution Steps:
+ 
+1. **Call Stack**: The call stack starts with the `console.log('Start')` call.
+   - Output: `Start`
+   - Call Stack: `console.log('Start')`
+ 
+2. **Call Stack**: The `setTimeout` call is encountered. The callback function is registered and moved to the task queue.
+   - Output: `Start`
+   - Call Stack: `setTimeout(callback, 0)`
+ 
+3. **Call Stack**: The `Promise.resolve().then(...)` call is encountered. The callback is registered and moved to the microtask queue.
+   - Output: `Start`
+   - Call Stack: `Promise.then(callback)`
+ 
+4. **Call Stack**: The `console.log('End')` call is executed.
+   - Output: `Start`, `End`
+   - Call Stack: `console.log('End')`
+ 
+5. **Microtask Queue**: The microtask queue is checked next. The promise callback is executed.
+   - Output: `Start`, `End`, `Promise`
+   - Call Stack: `Promise.then(callback)`
+ 
+6. **Task Queue**: The task queue is checked next. The `setTimeout` callback is executed.
+   - Output: `Start`, `End`, `Promise`, `Timeout`
+   - Call Stack: `setTimeout(callback)`
+ 
+### Summary
+The event loop ensures that JavaScript remains non-blocking and efficient, even with asynchronous operations. By managing the execution of callbacks in a well-defined order, the event loop allows for smooth, responsive applications.
