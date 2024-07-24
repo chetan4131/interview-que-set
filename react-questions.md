@@ -103,15 +103,21 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
     - The useContext hook allows a functional component to access values from the nearest context provider.
 # React Router / types of routers 
     - React Router is a standard library for routing in React applications. It enables the navigation between different components in a React application, changing the browser URL, and keeping the UI in sync with the URL.
+    - types of routers -
+    1. BrowserRouter
+    2. HashRouter
+    3. MemoryRouter
+    4. StaticRouter
+    5. Switch
 # What is Lifting State Up in React?
     - When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
 #  What is children prop?
     - Children is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.
 # useMemo Hook - 
-    -useMemo is used to sapplay memoization in react.
+    -useMemo is used to apply memoization in react.
     -memoization is a technique for improve the performance of the code.
     - it is useful to avoid expensive calculations on every render when the returned value is not changed.
-    - we can stop running unwanted functions on re-rendering
+    - we can stop running unwanted functions on re-rendering.
 # difference between useEffect and useMemo?
     - syntax are similar
     - in useEffect hook we can't return value and can't store in a variable, but in useMemo we can return value and store in a variable.
@@ -119,10 +125,11 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
     - custom hooks are basically a reusable function.
     - custom hooks are your logic which you created as a reusable function.
     - you can use multiple hooks and create something that will help you to skip repeated tasks in your project.
+
 # JavaScript questions =>
  https://chatgpt.com/share/ef7ce897-f4b6-49f0-8521-3bced63af3f5
 
-# Event Loop:
+# Explain Event Loop:
 
 The event loop is a fundamental concept in JavaScript that handles asynchronous operations and ensures non-blocking execution. It allows JavaScript to perform long-running operations without freezing the entire program. Here's a breakdown of how the event loop works:
  
