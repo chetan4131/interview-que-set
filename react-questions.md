@@ -113,11 +113,7 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
     - When several components need to share the same changing data then it is recommended to lift the shared state up to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
 #  What is children prop?
     - Children is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as children prop.
-# useMemo Hook - 
-    -useMemo is used to apply memoization in react.
-    -memoization is a technique for improve the performance of the code.
-    - it is useful to avoid expensive calculations on every render when the returned value is not changed.
-    - we can stop running unwanted functions on re-rendering.
+
 # difference between useEffect and useMemo?
     - syntax are similar
     - in useEffect hook we can't return value and can't store in a variable, but in useMemo we can return value and store in a variable.
@@ -125,6 +121,24 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
     - custom hooks are basically a reusable function.
     - custom hooks are your logic which you created as a reusable function.
     - you can use multiple hooks and create something that will help you to skip repeated tasks in your project.
+
+# useMemo Hook - 
+    - useMemo is used to apply memoization in react.
+    - memoization is a technique for improve the performance of the code.
+    - it is useful to avoid expensive calculations on every render when the returned value is not changed.
+    - we can stop running unwanted functions on re-rendering.
+
+# useLayoutEffect Hook - 
+    - useLayoutEffect Hook work exactly as same as useEffect (also the same syntax).
+    - But the difference is 'when it's run'.
+    - useEffect runs after the DOM is printed on the browser.
+    - useLayoutEffect runs before the DOM is printed on the browser.
+    - Whenever we want to run code before Dom is printed, we can use useLayoutEffect.
+    - useLayoutEffect runs syncronously.
+
+# Diffenrence between useEffect and useLayoutEffect Hooks
+    - useLayoutEffect runs syncronously after a render but before the screen is updated.
+    - useEffect runs asyncronously and after a render the is painted to the screen.
 
 # JavaScript questions =>
  https://chatgpt.com/share/ef7ce897-f4b6-49f0-8521-3bced63af3f5
