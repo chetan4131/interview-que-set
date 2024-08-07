@@ -2,6 +2,11 @@
     - NPM is a package manager and can be used to install node.js packages.
     - NPX is a tool to execute node.js packages.
 
+# What is react?
+    - open source js library
+    - use to create user interfaces
+    - react simplifies creation of SPA using reusable components.
+
 # How does react works?
     - React creates a virtual DOM. When a state chages in a component, it first runs a "diffing" algorithm which identifes what has changed in Virtual DOM. The second step is reconciliation, where it updates the dom with the result of diff.
 
@@ -117,6 +122,12 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
 # difference between useEffect and useMemo?
     - syntax are similar
     - in useEffect hook we can't return value and can't store in a variable, but in useMemo we can return value and store in a variable.
+# useState hook
+    - useState hook enables functional components to manage the state.
+    - useState() function accepts the initial state  value as the parameter and returns an array with two element:
+    1. The first element is the current state value
+    2. second element is the function that is used to update the state.
+ 
 # custom hook
     - custom hooks are basically a reusable function.
     - custom hooks are your logic which you created as a reusable function.
@@ -139,6 +150,9 @@ JSX (JavaScript XML) is a syntax extension for JavaScript, commonly used with Re
 # Diffenrence between useEffect and useLayoutEffect Hooks
     - useLayoutEffect runs syncronously after a render but before the screen is updated.
     - useEffect runs asyncronously and after a render the is painted to the screen.
+
+
+
 
 # JavaScript questions =>
  https://chatgpt.com/share/ef7ce897-f4b6-49f0-8521-3bced63af3f5
