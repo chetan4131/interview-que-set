@@ -65,7 +65,7 @@
 3. what is role of useState() hook and how it works?
 4. what is role of useEffect() hook and how it works and what is its use?
 5. what is Dependency Array in useEffect() hook?
-6. what is the meening of the empty array [] in useEffect?
+6. what is the meaning of the empty array [] in useEffect?
 
 ## Hooks - useContext/ useReducer
 1. what is the role of usereducer hook?
@@ -76,3 +76,104 @@
 6. what is the diff bet useState() and useReducer() hook?
 7. what are dispatch and reducer function in useReducer hook?
 8. what is the purpose of passing initial state as an object in UseReducer?
+
+## component lifecycle methods - 1
+1. what are component life cycle phase?
+=> 1. Mounting Phase - component creation started
+    - This phase occurs when an instance of a component is being created and inserted into the DOM.
+
+    2. Updating phase - compoenent updates
+     - This phase occurs when a component is being re-rendered as a result of changes to either its props or state.
+
+    3. unmounting phase - removal from DOM
+    - this phase occurs when a component is being removed from the DOM.
+
+2. what are component life cycle methods?
+    * Mounting Pahse - methods are given below
+        1. Constructor()
+        2. getDerivedStateFromProps()
+        3. render()
+        4. componentDidMount()
+    * Updating phase - methods are given below
+        1. getDerivedStateFromProps()
+        2. shouldComponentUpdate()
+        3. render()
+        4. getSnapshotBeforeUpdate()
+        5. componentDidUpdate()
+    * Unmunting pahse - 
+        1. componentWillUnmount()
+
+
+3. what are constructor in class components? when to use them?
+4. what is the role of super keyword in constructor?
+5. what is the role of render() method in component life cycle?
+6. How the State can be maintained in a class component?
+7. what is the role of componentDidMount() method in component life cycle?
+
+## Controlled and uncontrolled components
+
+1. what are controlled component in react?
+    - a controlled component is a component whose form elements like input fields or checkboxes are controlled by the state of the application.
+
+2. Diff between controlled and uncontrolled component?
+
+    * Controlled Components- 
+        1. values are controlled by React State.
+        2. Event handlers update react state.
+        3. Don't depend on useRef().
+        4. re-render in state changes.
+        5. a recommended and standard practice for form handling in react.
+
+    * uncontrolled Component- 
+        1. values are not controlled by React State. 
+        2. no expicit state update; values can be accessed directly from the DOM.
+        3. Commenly uses useRef() to access form element values.
+        4. less re-rendering since values are not directly tied to react state.
+        5. useful in certain scenarios but less commonely considered a best practice.
+
+3. what are characteristics of controlled component?
+    - State Control-
+    - Event Handling-
+    - State update - 
+    - re-rendering
+
+4. what are the addvantages of using controlled components in react forms?
+
+5. how to handle forms in react?
+    - The preferred and recommended approach for handeling forms in react is by using controlled components.
+
+6. how can you handle multiple input fields in a controlled form?
+    - maintain separate state variables for each input field and update them individually using the onChange event.
+
+7. how do you handle form validatioan in a controlled compoenent?
+8. in what scenarios might using uncontrolled components be advantageous?
+
+## Code splitting
+
+1. what is code spliting in react?
+    - code splitting is a technique to split the javascript bundle into smaller chunks, which are loaded on demand.
+
+2. how to implement code splitting in react?
+    - 3 steps for code spitting in react
+    1. Use React.lazy() to lazily import component.
+    2. wrap components with Suspense to handle loading.
+    3. configure your build tool(e.g. webpack) for dynamic imports.
+
+3. what is the role of Lazy and Suspense method in React?
+
+    - In React, React.lazy and Suspense are used to improve the performance of your application by enabling code-splitting and lazy loading of components. This allows you to load components only when they are needed, rather than loading everything upfront. Here's an overview and a basic example of how to use them:
+
+    1. React.lazy
+        React.lazy allows you to dynamically import a component, which means that the component will only be loaded when it's actually needed.
+
+    2. Suspense
+        Suspense is a component that allows you to specify a fallback UI (like a loading spinner) that is shown while your lazy-loaded component is being loaded.
+
+4. what are the Prons and Cons of code Splitting?
+5. what is the role of the import() function in code splitting?
+6. what is the purpose of the fallback prop in Suspense?
+7. can you dynamically load css files using code splitting in react?
+8. How do you inspect and analyze the generated chunks in a react application? 
+
+
+ 
