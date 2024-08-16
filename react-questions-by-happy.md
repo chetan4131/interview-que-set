@@ -175,5 +175,17 @@
 7. can you dynamically load css files using code splitting in react?
 8. How do you inspect and analyze the generated chunks in a react application? 
 
-
- 
+## React Other Que
+1. what is a higher order comoonent in react?
+2. what are 5 ways to style react components? explain inline style?
+3. diff bet React and React native?
+4. what is GraphQL?
+5. what are the top 3 ways to achieve state management? when to use what in react?
+6. How can you implement Authentication in a react application?
+7. what is use of react profiler?
+8. what is diff betw fetch and axios for api calls?
+9. what are popular testing libraries for react?
+10. how can you optimize performance in a react app?
+11. explain reactive programming with example
+12. in how many wanys can we implement Reactive Programing in react?
+13. how to pass data from child component to parent component?
