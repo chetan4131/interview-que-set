@@ -33,6 +33,7 @@ Strengths:
 
 Attention to Detail: I’m meticulous about ensuring that my code is clean and user interfaces are polished, which helps create high-quality products.
 Problem-Solving: I enjoy tackling complex issues and finding effective solutions, which has helped me successfully complete challenging projects.
+
 Weaknesses:
 
 Perfectionism: Sometimes, I focus too much on getting every detail perfect, which can slow me down. I’m working on balancing high standards with efficiency.
@@ -45,3 +46,8 @@ You should hire me because I bring three years of experience in frontend develop
 Q. What are your salary expectations? 
 
 Based on my experience and the industry standards for this role, I’m looking for a salary in the range of [insert range here]. However, I’m open to discussing this further based on the overall compensation package and the opportunities for growth within your company.
+
+Q. What is your notice period? is it negotiable?
+
+-2 months.
+-I would need to discuss the possibility of negotiating the notice period with my current HR or manager, based on the company's needs and the handover process. Once I have that conversation, I'll be able to provide more clarity on the timeline.
